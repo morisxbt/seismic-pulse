@@ -1,7 +1,7 @@
 /**
  * Seismic Pulse — script.js
  *
- * Tugas file ini cuma satu: ambil data/digest.json (yang diperbarui otomatis
+ * Tugas file ini cuma satu: ambil digest.json (yang diperbarui otomatis
  * sama workflow n8n tiap minggu) terus render ke halaman. Ga ada logika
  * "mikir" di sini — semua keputusan (docs berubah atau ngga, post apa aja
  * yang dipajang) udah diputusin di n8n. Ini cuma juru bicara.
@@ -9,7 +9,7 @@
 
 async function loadDigest() {
   try {
-    const res = await fetch('data/digest.json', { cache: 'no-store' });
+    const res = await fetch('digest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('digest.json tidak ditemukan (status ' + res.status + ')');
     const data = await res.json();
     renderDigest(data);
@@ -112,7 +112,7 @@ function renderFallback() {
   document.getElementById('last-updated').textContent =
     'Belum ada data digest — jalanin dulu workflow n8n-nya (lihat README).';
   document.getElementById('digest-grid').innerHTML =
-    '<p class="muted">data/digest.json belum ketemu, formatnya salah, atau belum pernah ditulis sama n8n.</p>';
+    '<p class="muted">digest.json belum ketemu, formatnya salah, atau belum pernah ditulis sama n8n.</p>';
   renderPulses(1);
 }
 
