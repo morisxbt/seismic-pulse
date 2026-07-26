@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seismic Pulse — Update Mingguan Komunitas</title>
+<meta name="description" content="Digest mingguan otomatis dari Seismic: update docs & post X, dirangkum tiap minggu lewat n8n.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Seismic <span class="brand-accent">Pulse</span>
+    </span>
+    <nav class="header-nav">
+      <a href="https://www.seismic.systems/" target="_blank" rel="noopener">Website</a>
+      <a href="https://docs.seismic.systems/" target="_blank" rel="noopener">Docs</a>
+      <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <p class="eyebrow">OTOMATIS &middot; MINGGUAN &middot; 2 MENIT BACA</p>
+    <h1>Sinyal dari Seismic,<br>ditangkep sebelum kelewatan.</h1>
+    <p class="hero-sub">Seismic Pulse narik update dokumentasi &amp; post terbaru dari <strong>@SeismicSys</strong> tiap minggu — otomatis lewat n8n, dirangkum di sini biar kamu ga perlu mantengin sendiri.</p>
+    <p class="hero-meta" id="last-updated">Memuat waktu update terakhir&hellip;</p>
+
+    <svg class="waveform" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+      <path class="waveform-line" d="M0,60 C15,60 25,58 35,60 C55,63 65,38 78,60 C95,90 105,15 118,60 C150,60 165,56 180,60 L215,60 C228,60 236,12 248,60 C258,92 268,60 280,60 L355,60 C368,60 378,28 390,60 C400,86 410,60 422,60 L515,60 C528,60 534,44 540,60 C546,74 552,60 558,60 L645,60 C658,60 664,8 670,60 C676,98 682,60 688,60 L795,60 C808,60 815,32 822,60 C828,80 834,60 840,60 L1000,60"/>
+      <g class="waveform-pulses" id="waveform-pulses"></g>
+    </svg>
+  </section>
+
+  <section class="section wrap" id="this-week">
+    <h2 class="section-title">Minggu Ini</h2>
+    <div class="digest-grid" id="digest-grid">
+      <p class="muted">Memuat digest&hellip;</p>
+    </div>
+  </section>
+
+  <section class="section wrap explainer">
+    <h2 class="section-title">Buat yang baru denger Seismic</h2>
+    <div class="explainer-grid">
+      <p class="explainer-text">Seismic itu blockchain EVM yang privasinya bawaan, bukan tempelan belakangan. Kamu tetep nulis Solidity, deploy pake Foundry, semua alur kerja tetep sama &mdash; tapi ada satu perubahan kecil di tipe data yang efeknya gede ke seluruh sistem.</p>
+      <div class="code-compare">
+        <div class="code-block">
+          <span class="code-label">ERC20 biasa</span>
+          <pre><code>uint256 <span class="tok">public</span> balanceOf;</code></pre>
+          <span class="code-note">Saldo keliatan semua orang</span>
+        </div>
+        <div class="code-arrow" aria-hidden="true">&rarr;</div>
+        <div class="code-block accent">
+          <span class="code-label">SRC20 (Seismic)</span>
+          <pre><code><span class="tok-accent">suint256</span> balanceOf;</code></pre>
+          <span class="code-note">Saldo disembunyiin, cuma pemiliknya yang tau</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="archive">
+    <h2 class="section-title">Arsip Minggu Lalu</h2>
+    <ul class="archive-list" id="archive-list">
+      <li class="muted">Arsip bakal keisi otomatis setelah workflow n8n jalan beberapa minggu.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-text">
+      <p class="footer-disclaimer">Seismic Pulse adalah proyek komunitas independen &mdash; bukan situs resmi Seismic Systems Inc.</p>
+      <p class="footer-credit">Dibangun manual sekali, diperbarui otomatis pakai n8n tiap minggu.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.seismic.systems/" target="_blank" rel="noopener">Website</a>
+      <a href="https://docs.seismic.systems/" target="_blank" rel="noopener">Docs</a>
+      <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X</a>
+      <a href="https://discord.com/invite/seismic" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
