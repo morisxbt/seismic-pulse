@@ -1,0 +1,270 @@
+# Seismic Docs
+
+## General
+
+- [Welcome](https://docs.seismic.systems/overview/readme.md): Private by Default. Familiar by Design.
+- [Why Seismic](https://docs.seismic.systems/overview/why-seismic.md)
+- [How Seismic Works](https://docs.seismic.systems/overview/how-seismic-works.md)
+- [Differences from Ethereum](https://docs.seismic.systems/overview/differences-from-ethereum.md)
+- [Use Cases](https://docs.seismic.systems/overview/use-cases.md)
+- [Installation](https://docs.seismic.systems/getting-started/installation.md): Setting up your local machine to develop with Seismic
+- [Development Toolkit](https://docs.seismic.systems/getting-started/development-toolkit.md): Use sfoundry to write and test smart contract code locally before deployment
+- [Quickstart](https://docs.seismic.systems/getting-started/quickstart.md): You're two commands away from running an encrypted protocol
+- [Deploy an SRC20 in 60 Seconds](https://docs.seismic.systems/getting-started/src20-factory.md): Deploy a private SRC20 token on Seismic testnet with a single command — no compiler required
+- [TypeScript SDK](https://docs.seismic.systems/getting-started/src20-factory/sdk.md): API reference for the @seismic/src20-sdk package used internally by the CLI and web app
+- [Web Interface](https://docs.seismic.systems/getting-started/src20-factory/web.md): Deploy SRC20 tokens from a browser using the SRC20 Factory web interface
+- [REST API](https://docs.seismic.systems/getting-started/src20-factory/api.md): Query SRC20 tokens deployed through the factory via a REST API
+- [Contracts](https://docs.seismic.systems/getting-started/src20-factory/contracts.md): Solidity interface reference for SRC20Factory and SRC20Token
+- [SRC20: Private Token](https://docs.seismic.systems/tutorials/src20.md): \Build a private ERC20 token where balances and transfers are hidden from observers
+- [ERC20 to SRC20: What Changes](https://docs.seismic.systems/tutorials/src20/erc20-to-src20.md): See exactly what changes between a standard ERC20 and a private SRC20
+- [Shielded Balances and Transfers](https://docs.seismic.systems/tutorials/src20/shielded-balances-and-transfers.md): Implement transfer() and transferFrom() with suint256
+- [Encrypted Events](https://docs.seismic.systems/tutorials/src20/encrypted-events.md): Emit transfer events with encrypted amounts using AES precompiles
+- [Signed Reads](https://docs.seismic.systems/tutorials/src20/signed-reads-for-balance-checking.md): Let users check their own balance without exposing it to others
+- [Intelligence Contracts](https://docs.seismic.systems/tutorials/src20/intelligence-contracts.md): Add compliance-compatible access control to your private token
+- [Building the Frontend](https://docs.seismic.systems/tutorials/src20/building-the-frontend.md): Connect your SRC20 contract to a React frontend with seismic-react
+- [Clown Beatdown](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract.md)
+- [Setting Up Your Project](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/setting-up-your-project.md)
+- [Verify devtool installation](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/setting-up-your-project/verify-devtool-installation.md)
+- [Create project structure](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/setting-up-your-project/create-project-structure.md)
+- [Initialize contracts](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/setting-up-your-project/initialize-contracts.md)
+- [Initialize the CLI](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/setting-up-your-project/initialize-cli.md)
+- [Writing the Contract](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract.md)
+- [Ch 1: The Secrets Pool](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract/chapter-1-the-secrets-pool.md)
+- [Ch 2: Stamina and Robbing Secrets](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract/chapter-2-the-stamina-bar-and-robbing-secrets.md)
+- [Ch 3: Rounds and Contributor Access](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract/chapter-3-reset-mechanism-rounds-and-contributor-access.md)
+- [Ch 4: Testing](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract/chapter-4-testing.md)
+- [Deploying](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/writing-the-contract/deploying.md)
+- [Building the CLI](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-cli.md)
+- [Seismic-viem Primer](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-cli/seismic-viem-primer.md)
+- [Ch 1: Constants and Utilities](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-cli/chapter-1-constants-and-utilities.md)
+- [Ch 2: Core App Logic](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-cli/chapter-2-core-app-logic.md)
+- [Ch 3: Bringing It All Together](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-cli/chapter-3-bringing-it-all-together.md)
+- [Building the Frontend](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-frontend.md)
+- [Ch 1: Project Setup and Providers](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-frontend/chapter-1-project-setup-and-providers.md)
+- [Ch 2: Contract Hooks](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-frontend/chapter-2-contract-hooks.md)
+- [Ch 3: Game UI Components](https://docs.seismic.systems/tutorials/understanding-the-clown-beatdown-contract/building-the-frontend/chapter-3-game-ui-components.md)
+- [Shielded Types](https://docs.seismic.systems/seismic-solidity/shielded-types.md): A handle on stype unlocks all shielded computation and storage
+- [Collections](https://docs.seismic.systems/seismic-solidity/collections.md): Using stype variables in arrays and maps
+- [Casting](https://docs.seismic.systems/seismic-solidity/casting.md)
+- [Shielded Literals](https://docs.seismic.systems/seismic-solidity/shielded-literals.md)
+- [Events](https://docs.seismic.systems/seismic-solidity/events.md)
+- [Storage](https://docs.seismic.systems/seismic-solidity/storage.md)
+- [Best Practices](https://docs.seismic.systems/seismic-solidity/best-practices.md)
+- [Footguns](https://docs.seismic.systems/seismic-solidity/footguns.md)
+- [Overview](https://docs.seismic.systems/clients/clients.md)
+- [TypeScript](https://docs.seismic.systems/clients/typescript.md): TypeScript client libraries for Seismic
+- [seismic-viem](https://docs.seismic.systems/clients/typescript/viem.md): TypeScript client library for Seismic, composing with viem to add shielded transactions, encrypted calldata, and signed reads.
+- [Installation](https://docs.seismic.systems/clients/typescript/viem/installation.md): Install seismic-viem and configure viem peer dependency
+- [Shielded Public Client](https://docs.seismic.systems/clients/typescript/viem/shielded-public-client.md): Read-only client with TEE key access and precompile support
+- [Shielded Wallet Client](https://docs.seismic.systems/clients/typescript/viem/shielded-wallet-client.md): Full-featured client with encryption, shielded writes, and signed reads
+- [Encryption](https://docs.seismic.systems/clients/typescript/viem/encryption.md): ECDH key exchange, AES-GCM calldata encryption, and the Seismic encryption pipeline
+- [Contract Instance](https://docs.seismic.systems/clients/typescript/viem/contract-instance.md): Type-safe shielded contract instances with smart routing and read/write/sread/swrite/tread/twrite/dwrite namespaces
+- [Signed Reads](https://docs.seismic.systems/clients/typescript/viem/signed-reads.md): Authenticated read calls that prove caller identity
+- [Shielded Writes](https://docs.seismic.systems/clients/typescript/viem/shielded-writes.md): Send encrypted write transactions with shieldedWriteContract
+- [Chains](https://docs.seismic.systems/clients/typescript/viem/chains.md): Pre-configured chain definitions for Seismic networks
+- [Precompiles](https://docs.seismic.systems/clients/typescript/viem/precompiles.md): Seismic precompiled contracts for cryptographic operations
+- [Deposit Contract](https://docs.seismic.systems/clients/typescript/viem/deposit-contract.md): Validator staking operations on the Seismic deposit contract
+- [SRC20 Event Watching](https://docs.seismic.systems/clients/typescript/viem/src20.md): Watch and decrypt SRC20 token events
+- [seismic-react](https://docs.seismic.systems/clients/typescript/react.md): React hooks and providers for Seismic, composing with wagmi to add shielded wallet management, encrypted transactions, and signed reads to React apps.
+- [Installation](https://docs.seismic.systems/clients/typescript/react/installation.md): Install seismic-react and configure peer dependencies
+- [Shielded Wallet Provider](https://docs.seismic.systems/clients/typescript/react/shielded-wallet-provider.md): React context provider for shielded wallet and public client
+- [Hooks](https://docs.seismic.systems/clients/typescript/react/hooks.md): React hooks for shielded transactions and signed reads
+- [useShieldedWallet](https://docs.seismic.systems/clients/typescript/react/hooks/useshieldedwallet.md): Access shielded public and wallet clients from context
+- [useShieldedContract](https://docs.seismic.systems/clients/typescript/react/hooks/useshieldedcontract.md): Get a ShieldedContract instance for reads and writes
+- [useShieldedRead](https://docs.seismic.systems/clients/typescript/react/hooks/useshieldedread.md): Execute authenticated read calls on shielded contracts
+- [useShieldedWrite](https://docs.seismic.systems/clients/typescript/react/hooks/useshieldedwrite.md): Send encrypted write transactions to shielded contracts
+- [Wallet Guides](https://docs.seismic.systems/clients/typescript/react/wallet-guides.md): Integrate Seismic with popular wallet connection libraries
+- [RainbowKit](https://docs.seismic.systems/clients/typescript/react/wallet-guides/rainbowkit.md): Set up RainbowKit with Seismic for wallet connection
+- [Privy](https://docs.seismic.systems/clients/typescript/react/wallet-guides/privy.md): Set up Privy with Seismic for email and social login
+- [AppKit](https://docs.seismic.systems/clients/typescript/react/wallet-guides/appkit.md): Set up AppKit (WalletConnect) with Seismic
+- [Chains](https://docs.seismic.systems/clients/typescript/react/chains.md): RainbowKit-compatible chain configurations for Seismic networks
+- [Seismic Testnet](https://docs.seismic.systems/clients/typescript/react/chains/seismic-testnet.md): Seismic public testnet chain configuration
+- [Sanvil](https://docs.seismic.systems/clients/typescript/react/chains/sanvil.md): Local development chain configurations
+- [Create Seismic Devnet](https://docs.seismic.systems/clients/typescript/react/chains/create-seismic-devnet.md): Factory function for custom Seismic chain configurations
+- [Examples](https://docs.seismic.systems/clients/typescript/react/examples.md): Complete runnable examples for Seismic React
+- [Basic dApp](https://docs.seismic.systems/clients/typescript/react/examples/basic-dapp.md): Complete minimal dApp with shielded writes and signed reads
+- [Python — seismic-web3](https://docs.seismic.systems/clients/python.md): Python SDK for Seismic, built on web3.py
+- [Client](https://docs.seismic.systems/clients/python/client.md): Creating sync and async Seismic clients
+- [create\_wallet\_client](https://docs.seismic.systems/clients/python/client/create-wallet-client.md): Create sync Web3 instance with full Seismic wallet capabilities
+- [create\_async\_wallet\_client](https://docs.seismic.systems/clients/python/client/create-async-wallet-client.md): Create async Web3 instance with full Seismic wallet capabilities
+- [create\_public\_client](https://docs.seismic.systems/clients/python/client/create-public-client.md): Create sync Web3 instance with public (read-only) Seismic access
+- [create\_async\_public\_client](https://docs.seismic.systems/clients/python/client/create-async-public-client.md): Create async Web3 instance with public (read-only) Seismic access
+- [EncryptionState](https://docs.seismic.systems/clients/python/client/encryption-state.md): Holds AES key and encryption keypair derived from ECDH
+- [get\_encryption](https://docs.seismic.systems/clients/python/client/get-encryption.md): Derive encryption state from TEE public key using ECDH
+- [Contract](https://docs.seismic.systems/clients/python/contract.md): Instantiating contracts and interacting through shielded and transparent namespaces
+- [ShieldedContract](https://docs.seismic.systems/clients/python/contract/shielded-contract.md): Sync contract wrapper with shielded and transparent namespaces
+- [AsyncShieldedContract](https://docs.seismic.systems/clients/python/contract/async-shielded-contract.md): Async contract wrapper with shielded and transparent namespaces
+- [PublicContract](https://docs.seismic.systems/clients/python/contract/public-contract.md): Sync contract wrapper with transparent read-only access
+- [AsyncPublicContract](https://docs.seismic.systems/clients/python/contract/async-public-contract.md): Async contract wrapper with transparent read-only access
+- [Namespaces](https://docs.seismic.systems/clients/python/contract/namespaces.md): Contract interaction namespaces for shielded and transparent operations
+- [.write](https://docs.seismic.systems/clients/python/contract/namespaces/write.md): Shielded write namespace for encrypted contract transactions
+- [.read](https://docs.seismic.systems/clients/python/contract/namespaces/read.md): Signed read namespace for encrypted contract queries
+- [.twrite](https://docs.seismic.systems/clients/python/contract/namespaces/twrite.md): Transparent write namespace for standard contract transactions
+- [.tread](https://docs.seismic.systems/clients/python/contract/namespaces/tread.md): Transparent read namespace for standard contract calls
+- [.dwrite](https://docs.seismic.systems/clients/python/contract/namespaces/dwrite.md): Debug write namespace for encrypted transactions with inspection
+- [Chains](https://docs.seismic.systems/clients/python/chains.md): Network configurations and chain constants
+- [ChainConfig](https://docs.seismic.systems/clients/python/chains/chain-config.md): Immutable network configuration dataclass
+- [SEISMIC\_TESTNET](https://docs.seismic.systems/clients/python/chains/seismic-testnet.md): Pre-configured Seismic public testnet
+- [SANVIL](https://docs.seismic.systems/clients/python/chains/sanvil.md): Pre-configured local development network
+- [make\_seismic\_testnet](https://docs.seismic.systems/clients/python/chains/make-seismic-testnet.md): Factory function for testnet chain configs
+- [SEISMIC\_TX\_TYPE](https://docs.seismic.systems/clients/python/chains/seismic-tx-type.md): Transaction type byte for Seismic transactions
+- [Precompiles](https://docs.seismic.systems/clients/python/precompiles.md): Call Mercury EVM precompiles from Python
+- [rng](https://docs.seismic.systems/clients/python/precompiles/rng.md): Generate random bytes on-chain
+- [ecdh](https://docs.seismic.systems/clients/python/precompiles/ecdh.md): On-chain elliptic-curve Diffie-Hellman key exchange
+- [aes\_gcm\_encrypt](https://docs.seismic.systems/clients/python/precompiles/aes-gcm-encrypt.md): On-chain AES-256-GCM encryption
+- [aes\_gcm\_decrypt](https://docs.seismic.systems/clients/python/precompiles/aes-gcm-decrypt.md): On-chain AES-256-GCM decryption
+- [hkdf](https://docs.seismic.systems/clients/python/precompiles/hkdf.md): On-chain HKDF-SHA256 key derivation
+- [secp256k1\_sign](https://docs.seismic.systems/clients/python/precompiles/secp256k1-sign.md): On-chain secp256k1 ECDSA signing
+- [API Reference](https://docs.seismic.systems/clients/python/api-reference.md): Core Python SDK types and EIP-712 helpers
+- [Types](https://docs.seismic.systems/clients/python/api-reference/types.md): Core type definitions for the Python SDK
+- [Bytes32](https://docs.seismic.systems/clients/python/api-reference/types/bytes32.md): Fixed-size 32-byte value type
+- [PrivateKey](https://docs.seismic.systems/clients/python/api-reference/types/private-key.md): 32-byte secp256k1 private key
+- [CompressedPublicKey](https://docs.seismic.systems/clients/python/api-reference/types/compressed-public-key.md): 33-byte compressed secp256k1 public key
+- [EncryptionNonce](https://docs.seismic.systems/clients/python/api-reference/types/encryption-nonce.md): 12-byte AES-GCM encryption nonce
+- [hex\_to\_bytes](https://docs.seismic.systems/clients/python/api-reference/types/hex-to-bytes.md): Convert a hex string to raw bytes
+- [Transaction Types](https://docs.seismic.systems/clients/python/api-reference/transaction-types.md): Transaction type definitions for the Python SDK
+- [Signature](https://docs.seismic.systems/clients/python/api-reference/transaction-types/signature.md): ECDSA signature components
+- [SeismicElements](https://docs.seismic.systems/clients/python/api-reference/transaction-types/seismic-elements.md): Seismic-specific transaction fields
+- [SeismicSecurityParams](https://docs.seismic.systems/clients/python/api-reference/transaction-types/seismic-security-params.md): Optional security parameters for shielded transactions
+- [UnsignedSeismicTx](https://docs.seismic.systems/clients/python/api-reference/transaction-types/unsigned-seismic-tx.md): Complete unsigned Seismic transaction
+- [TxSeismicMetadata](https://docs.seismic.systems/clients/python/api-reference/transaction-types/tx-seismic-metadata.md): Transaction metadata used for AAD context
+- [LegacyFields](https://docs.seismic.systems/clients/python/api-reference/transaction-types/legacy-fields.md): Standard EVM transaction fields
+- [PlaintextTx](https://docs.seismic.systems/clients/python/api-reference/transaction-types/plaintext-tx.md): Unencrypted transaction view for debugging
+- [DebugWriteResult](https://docs.seismic.systems/clients/python/api-reference/transaction-types/debug-write-result.md): Result from debug shielded write
+- [EIP-712](https://docs.seismic.systems/clients/python/api-reference/eip712.md): EIP-712 signing helpers for the Python SDK
+- [sign\_seismic\_tx\_eip712](https://docs.seismic.systems/clients/python/api-reference/eip712/sign-seismic-tx-eip712.md): Sign and serialize TxSeismic using EIP-712 hashing
+- [eip712\_signing\_hash](https://docs.seismic.systems/clients/python/api-reference/eip712/eip712-signing-hash.md): Compute final EIP-712 signing digest for TxSeismic
+- [domain\_separator](https://docs.seismic.systems/clients/python/api-reference/eip712/domain-separator.md): Compute Seismic EIP-712 domain separator
+- [struct\_hash](https://docs.seismic.systems/clients/python/api-reference/eip712/struct-hash.md): Compute TxSeismic EIP-712 struct hash
+- [build\_seismic\_typed\_data](https://docs.seismic.systems/clients/python/api-reference/eip712/build-seismic-typed-data.md): Build eth\_signTypedData\_v4 payload for TxSeismic
+- [Namespaces](https://docs.seismic.systems/clients/python/namespaces.md): The \`w3.seismic\` namespace classes
+- [SeismicNamespace](https://docs.seismic.systems/clients/python/namespaces/seismic-namespace.md): Sync wallet Seismic namespace
+- [AsyncSeismicNamespace](https://docs.seismic.systems/clients/python/namespaces/async-seismic-namespace.md): Async wallet Seismic namespace
+- [SeismicPublicNamespace](https://docs.seismic.systems/clients/python/namespaces/seismic-public-namespace.md): Sync read-only Seismic namespace
+- [AsyncSeismicPublicNamespace](https://docs.seismic.systems/clients/python/namespaces/async-seismic-public-namespace.md): Async read-only Seismic namespace
+- [Methods](https://docs.seismic.systems/clients/python/namespaces/methods.md): Method-level reference for \`w3.seismic\`
+- [send\_shielded\_transaction](https://docs.seismic.systems/clients/python/namespaces/methods/send-shielded-transaction.md): Send encrypted TxSeismic transaction
+- [signed\_call](https://docs.seismic.systems/clients/python/namespaces/methods/signed-call.md): Execute signed encrypted eth\_call
+- [debug\_send\_shielded\_transaction](https://docs.seismic.systems/clients/python/namespaces/methods/debug-send-shielded-transaction.md): Send shielded transaction and return debug artifacts
+- [get\_tee\_public\_key](https://docs.seismic.systems/clients/python/namespaces/methods/get-tee-public-key.md): Fetch the node TEE compressed public key
+- [get\_deposit\_root](https://docs.seismic.systems/clients/python/namespaces/methods/get-deposit-root.md): Read deposit Merkle root from deposit contract
+- [get\_deposit\_count](https://docs.seismic.systems/clients/python/namespaces/methods/get-deposit-count.md): Read deposit count from deposit contract
+- [deposit](https://docs.seismic.systems/clients/python/namespaces/methods/deposit.md): Submit a validator deposit transaction
+- [SRC20](https://docs.seismic.systems/clients/python/src20.md): SRC20 token usage with shielded reads/writes
+- [Event Watching](https://docs.seismic.systems/clients/python/src20/event-watching.md): Watch and decrypt SRC20 Transfer and Approval events
+- [watch\_src20\_events](https://docs.seismic.systems/clients/python/src20/event-watching/watch-src20-events.md): Watch SRC20 events with automatic key fetching
+- [SRC20EventWatcher](https://docs.seismic.systems/clients/python/src20/event-watching/src20-event-watcher.md): Synchronous SRC20 event watcher class
+- [AsyncSRC20EventWatcher](https://docs.seismic.systems/clients/python/src20/event-watching/async-src20-event-watcher.md): Asynchronous SRC20 event watcher class
+- [Intelligence Providers](https://docs.seismic.systems/clients/python/src20/intelligence-providers.md): Viewing key management and encrypted event decryption
+- [register\_viewing\_key](https://docs.seismic.systems/clients/python/src20/intelligence-providers/register-viewing-key.md): Register a viewing key in the Directory contract
+- [get\_viewing\_key](https://docs.seismic.systems/clients/python/src20/intelligence-providers/get-viewing-key.md): Fetch your viewing key from the Directory contract
+- [check\_has\_key](https://docs.seismic.systems/clients/python/src20/intelligence-providers/check-has-key.md): Check if an address has a registered viewing key
+- [watch\_src20\_events\_with\_key](https://docs.seismic.systems/clients/python/src20/intelligence-providers/watch-src20-events-with-key.md): Watch SRC20 events with an explicit viewing key
+- [Types](https://docs.seismic.systems/clients/python/src20/types.md): Data types for SRC20 event watching
+- [DecryptedTransferLog](https://docs.seismic.systems/clients/python/src20/types/decrypted-transfer-log.md): Decoded SRC20 Transfer event with decrypted amount
+- [DecryptedApprovalLog](https://docs.seismic.systems/clients/python/src20/types/decrypted-approval-log.md): Decoded SRC20 Approval event with decrypted amount
+- [ABIs](https://docs.seismic.systems/clients/python/abis.md): Built-in ABI constants and deposit helper functions
+- [SRC20\_ABI](https://docs.seismic.systems/clients/python/abis/src20-abi.md): SRC20 token interface ABI constant
+- [Deposit Contract](https://docs.seismic.systems/clients/python/abis/deposit-contract.md): Validator deposit contract ABI and address constants
+- [Directory](https://docs.seismic.systems/clients/python/abis/directory.md): Directory contract ABI and address for viewing key management
+- [compute\_deposit\_data\_root](https://docs.seismic.systems/clients/python/abis/compute-deposit-data-root.md): Compute SSZ-style deposit data root for validator deposits
+- [make\_withdrawal\_credentials](https://docs.seismic.systems/clients/python/abis/make-withdrawal-credentials.md): Build 32-byte ETH1 withdrawal credentials from an address
+- [Guides](https://docs.seismic.systems/clients/python/guides.md): Step-by-step guides for common workflows
+- [Shielded Write](https://docs.seismic.systems/clients/python/guides/shielded-write.md): Encrypted transactions — lifecycle, security parameters, and the low-level API
+- [Signed Reads](https://docs.seismic.systems/clients/python/guides/signed-reads.md): Encrypted eth\_call that proves your identity to the contract
+- [SRC20 Workflow](https://docs.seismic.systems/clients/python/guides/src20-workflow.md): Read metadata, check balance, approve, and transfer with SRC20
+- [Async Patterns](https://docs.seismic.systems/clients/python/guides/async-patterns.md): Concurrent operations and async best practices
+- [Rust — seismic-alloy](https://docs.seismic.systems/clients/alloy.md): Rust SDK for Seismic, built on Alloy
+- [Installation](https://docs.seismic.systems/clients/alloy/installation.md): Cargo setup, dependencies, and prerequisites for seismic-alloy
+- [Provider](https://docs.seismic.systems/clients/alloy/provider.md): Signed and unsigned provider types for interacting with Seismic nodes
+- [SeismicSignedProvider](https://docs.seismic.systems/clients/alloy/provider/seismic-signed-provider.md): Full-featured Seismic provider with wallet integration, encryption, and response decryption
+- [SeismicUnsignedProvider](https://docs.seismic.systems/clients/alloy/provider/seismic-unsigned-provider.md): Read-only Seismic provider for public operations without a wallet
+- [Encryption](https://docs.seismic.systems/clients/alloy/provider/encryption.md): TEE key exchange, ECDH shared secret derivation, and AES-GCM calldata encryption
+- [Contract Interaction](https://docs.seismic.systems/clients/alloy/contract-interaction.md): Interacting with Seismic contracts using seismic-alloy
+- [Shielded Calls](https://docs.seismic.systems/clients/alloy/contract-interaction/shielded-calls.md): Encrypted writes and signed reads using seismic-alloy
+- [Transparent Calls](https://docs.seismic.systems/clients/alloy/contract-interaction/transparent-calls.md): Standard Ethereum calls without encryption
+- [Transaction Types](https://docs.seismic.systems/clients/alloy/transaction-types.md): Seismic transaction types and data structures in seismic-alloy
+- [TxSeismic](https://docs.seismic.systems/clients/alloy/transaction-types/tx-seismic.md): Core Seismic transaction type (0x4A)
+- [TxSeismicElements](https://docs.seismic.systems/clients/alloy/transaction-types/tx-seismic-elements.md): Encryption metadata and security parameters for Seismic transactions
+- [TxSeismicMetadata](https://docs.seismic.systems/clients/alloy/transaction-types/tx-seismic-metadata.md): Transaction metadata used for AAD in AEAD encryption
+- [SeismicTxEnvelope](https://docs.seismic.systems/clients/alloy/transaction-types/seismic-tx-envelope.md): Signed transaction wrapper supporting all Ethereum and Seismic types
+- [Network](https://docs.seismic.systems/clients/alloy/network.md): Network abstractions for Seismic chain interaction
+- [SeismicNetwork Trait](https://docs.seismic.systems/clients/alloy/network/seismic-network-trait.md): Core trait defining Seismic network behavior
+- [SeismicReth](https://docs.seismic.systems/clients/alloy/network/seismic-reth.md): Production network type for Seismic devnet, testnet, and mainnet
+- [SeismicFoundry](https://docs.seismic.systems/clients/alloy/network/seismic-foundry.md): Development network type for Sanvil (Seismic Anvil) local testing
+- [Wallet](https://docs.seismic.systems/clients/alloy/wallet.md): Seismic wallet for transaction signing
+- [SeismicWallet](https://docs.seismic.systems/clients/alloy/wallet/seismic-wallet.md): Multi-signer wallet generic over SeismicNetwork
+- [Fillers](https://docs.seismic.systems/clients/alloy/fillers.md): Transaction filler pipeline for Seismic-specific processing
+- [SeismicElementsFiller](https://docs.seismic.systems/clients/alloy/fillers/seismic-elements-filler.md): Encryption elements generation and calldata encryption filler
+- [SeismicGasFiller](https://docs.seismic.systems/clients/alloy/fillers/seismic-gas-filler.md): Gas estimation filler with deferred support for seismic transactions
+- [Chains](https://docs.seismic.systems/clients/alloy/chains.md): Chain configurations for Seismic networks
+- [Seismic Testnet](https://docs.seismic.systems/clients/alloy/chains/seismic-testnet.md): Seismic public testnet connection and configuration
+- [Sanvil](https://docs.seismic.systems/clients/alloy/chains/sanvil.md): Local development with Sanvil (Seismic Anvil)
+- [Precompiles](https://docs.seismic.systems/clients/alloy/precompiles.md): Call Mercury EVM precompiles from Rust
+- [rng](https://docs.seismic.systems/clients/alloy/precompiles/rng.md): Generate random bytes on-chain
+- [ecdh](https://docs.seismic.systems/clients/alloy/precompiles/ecdh.md): On-chain elliptic-curve Diffie-Hellman key exchange
+- [aes\_gcm\_encrypt](https://docs.seismic.systems/clients/alloy/precompiles/aes-gcm-encrypt.md): On-chain AES-256-GCM encryption
+- [aes\_gcm\_decrypt](https://docs.seismic.systems/clients/alloy/precompiles/aes-gcm-decrypt.md): On-chain AES-256-GCM decryption
+- [hkdf](https://docs.seismic.systems/clients/alloy/precompiles/hkdf.md): On-chain HKDF-SHA256 key derivation
+- [secp256k1\_sign](https://docs.seismic.systems/clients/alloy/precompiles/secp256k1-sign.md): On-chain secp256k1 ECDSA signing
+- [SRC20](https://docs.seismic.systems/clients/alloy/src20.md): Privacy-preserving ERC20 tokens with shielded balances
+- [Token Interaction](https://docs.seismic.systems/clients/alloy/src20/token-interaction.md): Reading and writing SRC20 token balances and allowances
+- [Transfers](https://docs.seismic.systems/clients/alloy/src20/transfers.md): Shielded transfer patterns for SRC20 tokens
+- [Event Decryption](https://docs.seismic.systems/clients/alloy/src20/event-decryption.md): Decrypting encrypted SRC20 Transfer and Approval events
+- [Guides](https://docs.seismic.systems/clients/alloy/guides.md): Step-by-step guides for common workflows
+- [Shielded Write](https://docs.seismic.systems/clients/alloy/guides/shielded-write.md): Encrypted transactions — lifecycle, security parameters, and the filler pipeline
+- [Signed Reads](https://docs.seismic.systems/clients/alloy/guides/signed-reads.md): Encrypted eth\_call that proves your identity to the contract
+- [Examples](https://docs.seismic.systems/clients/alloy/examples.md): Complete runnable examples
+- [Basic Setup](https://docs.seismic.systems/clients/alloy/examples/basic-setup.md): Complete provider setup with connection verification
+- [Shielded Write Complete](https://docs.seismic.systems/clients/alloy/examples/shielded-write-complete.md): Full shielded write lifecycle from deployment to receipt verification
+- [Signed Read Pattern](https://docs.seismic.systems/clients/alloy/examples/signed-read-pattern.md): Authenticated read pattern with encrypted request and response
+- [Contract Deployment](https://docs.seismic.systems/clients/alloy/examples/contract-deployment.md): Deploy and interact with a shielded contract
+- [Overview](https://docs.seismic.systems/claude-code/claude-code.md): Use Claude Code effectively with Seismic's privacy-first SDKs
+- [Workflow Skills](https://docs.seismic.systems/claude-code/workflow-skills.md): Optional Claude Code workflow skills for common Seismic tasks
+- [CLAUDE.md Templates](https://docs.seismic.systems/claude-code/templates.md): Ready-to-use CLAUDE.md templates for each Seismic SDK
+- [Seismic Solidity](https://docs.seismic.systems/claude-code/templates/seismic-solidity.md): CLAUDE.md template for Seismic smart contract development
+- [Seismic Viem](https://docs.seismic.systems/claude-code/templates/seismic-viem.md): CLAUDE.md template for TypeScript dapp development with seismic-viem
+- [Seismic React](https://docs.seismic.systems/claude-code/templates/seismic-react.md): CLAUDE.md template for React frontend development with seismic-react
+- [Seismic Alloy (Rust)](https://docs.seismic.systems/claude-code/templates/seismic-alloy.md): CLAUDE.md template for Rust dapp development with seismic-alloy
+- [Seismic Python](https://docs.seismic.systems/claude-code/templates/seismic-python.md): CLAUDE.md template for Python dapp development with seismic-web3
+- [Testnet](https://docs.seismic.systems/networks/testnet.md)
+- [The Seismic Transaction](https://docs.seismic.systems/reference/seismic-transaction.md)
+- [Cryptography](https://docs.seismic.systems/reference/seismic-transaction/cryptography.md)
+- [Tx Lifecycle](https://docs.seismic.systems/reference/seismic-transaction/tx-lifecycle.md)
+- [Signed Reads](https://docs.seismic.systems/reference/seismic-transaction/signed-reads.md)
+- [Opcodes](https://docs.seismic.systems/reference/opcodes.md)
+- [Precompiles](https://docs.seismic.systems/reference/precompiles.md)
+- [RNG](https://docs.seismic.systems/reference/precompiles/rng.md)
+- [ECDH](https://docs.seismic.systems/reference/precompiles/ecdh.md)
+- [AES-GCM Encrypt](https://docs.seismic.systems/reference/precompiles/aes-gcm-encrypt.md)
+- [AES-GCM Decrypt](https://docs.seismic.systems/reference/precompiles/aes-gcm-decrypt.md)
+- [HKDF](https://docs.seismic.systems/reference/precompiles/hkdf.md)
+- [secp256k1 Sign](https://docs.seismic.systems/reference/precompiles/secp256k1-sign.md)
+- [Predeploys](https://docs.seismic.systems/reference/predeploys.md)
+- [Deterministic Deployments](https://docs.seismic.systems/reference/deterministic-deployments.md)
+- [RPC Methods](https://docs.seismic.systems/reference/rpc-methods.md)
+- [seismic\_getTeePublicKey](https://docs.seismic.systems/reference/rpc-methods/seismic-get-tee-public-key.md)
+- [eth\_call](https://docs.seismic.systems/reference/rpc-methods/eth-call.md)
+- [eth\_sendRawTransaction](https://docs.seismic.systems/reference/rpc-methods/eth-send-raw-transaction.md)
+- [eth\_getStorageAt](https://docs.seismic.systems/reference/rpc-methods/eth-get-storage-at.md)
+- [Migrating from Ethereum](https://docs.seismic.systems/reference/migrating-from-ethereum.md): Step-by-step guide to migrating Ethereum contracts and dApps to Seismic
+- [Repos](https://docs.seismic.systems/reference/repos.md)
+- [Node Operator FAQ](https://docs.seismic.systems/reference/node-operator-faq.md)
+- [Terms of Service](https://docs.seismic.systems/reference/terms-of-service.md): Effective Date: March 30, 2026
+- [Privacy Policy](https://docs.seismic.systems/reference/privacy-policy.md): Last Updated: July 1, 2026
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.seismic.systems/overview/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
