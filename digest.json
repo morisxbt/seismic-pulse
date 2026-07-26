@@ -1,11 +1,43 @@
 {
-  "generatedAt": null,
-  "weekLabel": null,
+  "generatedAt": "2026-07-26T08:39:36.285Z",
+  "weekLabel": "20 Juli – 26 Juli",
   "docs": {
-    "changed": false,
-    "summary": "Ini masih data awal (seed) — belum pernah diperbarui sama workflow n8n. Jalanin workflow-nya sekali secara manual buat ngisi ini beneran.",
-    "changedPages": []
+    "changed": true,
+    "summary": "Docs berubah minggu ini — 5 baris baru terdeteksi di index.",
+    "changedPages": [
+      "# Seismic Docs",
+      "## General",
+      "- [Welcome](https://docs.seismic.systems/overview/readme.md): Private by Default. Familiar by Design.",
+      "- [Why Seismic](https://docs.seismic.systems/overview/why-seismic.md)",
+      "- [How Seismic Works](https://docs.seismic.systems/overview/how-seismic-works.md)"
+    ]
   },
-  "posts": [],
+  "posts": [
+    {
+      "text": "Named, multi-currency accounts for global earners. Powered by Seismic.",
+      "url": "https://x.com/SeismicSys/status/2072004201337565505",
+      "date": "2026-06-30T17:07:00.000Z"
+    },
+    {
+      "text": "Pinned: Seismic Testnet is live. We built it alongside 30 financial services companies, from fintech startups, to regulated institutions, to local governments.",
+      "url": "https://x.com/SeismicSys/status/2054566547255898360",
+      "date": "2026-05-13T14:16:00.000Z"
+    },
+    {
+      "text": "Sedona (@SedonaFi) is a trading-first neobank that brings the simplicity of apps like Coinbase or Venmo to DeFi. Private trades, auto-managed yield and card spending, all in one place. No blockchain complexity, just a cl",
+      "url": "https://x.com/SeismicSys/status/2049170722661036163",
+      "date": "2026-04-28T16:55:00.000Z"
+    },
+    {
+      "text": "gEarth",
+      "url": "https://x.com/SeismicSys/status/2047347568602923314",
+      "date": "2026-04-23T16:11:00.000Z"
+    },
+    {
+      "text": "Digital nomads spent $80B in SEA last year, yet over 15% of them held visas that were ineligible for local bank accounts with QR code support. Prism (@getprism_money) is a neobank that enables these nomads to spend with ",
+      "url": "https://x.com/SeismicSys/status/2044414554164052300",
+      "date": "2026-04-15T13:56:00.000Z"
+    }
+  ],
   "history": []
 }
