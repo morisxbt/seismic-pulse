@@ -1,15 +1,20 @@
 /**
  * Seismic Pulse — script.js
  *
- * Tugas file ini cuma satu: ambil digest.json (yang diperbarui otomatis
- * sama workflow n8n tiap minggu) terus render ke halaman. Ga ada logika
+ * Tugas file ini cuma satu: ambil data/digest.json (yang diperbarui otomatis
+ * sama workflow n8n tiap hari) terus render ke halaman. Ga ada logika
  * "mikir" di sini — semua keputusan (docs berubah atau ngga, post apa aja
- * yang dipajang) udah diputusin di n8n. Ini cuma juru bicara.
+ * yang dipajang, repo mana yang aktif) udah diputusin di n8n. Ini cuma
+ * juru bicara.
+ *
+ * Catatan kompatibilitas: skema data sempat berubah (dari mingguan/1-akun
+ * ke harian/multi-ekosistem). Fungsi di bawah baca field baru dulu,
+ * fallback ke field lama, biar ga rusak pas transisi.
  */
 
 async function loadDigest() {
   try {
-    const res = await fetch('digest.json', { cache: 'no-store' });
+    const res = await fetch('data/digest.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('digest.json tidak ditemukan (status ' + res.status + ')');
     const data = await res.json();
     renderDigest(data);
@@ -41,11 +46,10 @@ function renderDigest(data) {
     ? `Terakhir diperbarui otomatis: ${formatDate(data.generatedAt)}`
     : 'Belum ada waktu update tercatat.';
 
-  // --- Kartu digest minggu ini ---
+  // --- Kartu: Update Dokumentasi + Aktivitas GitHub ---
   const grid = document.getElementById('digest-grid');
   grid.innerHTML = '';
 
-  // Kartu 1: update docs
   const docs = data.docs || {};
   const docsCard = document.createElement('article');
   docsCard.className = 'card';
@@ -54,7 +58,7 @@ function renderDigest(data) {
       ${docs.changed ? 'Docs Berubah' : 'Docs Tenang'}
     </span>
     <h3>Update Dokumentasi</h3>
-    <p>${escapeHtml(docs.summary || 'Belum ada ringkasan minggu ini.')}</p>
+    <p>${escapeHtml(docs.summary || 'Belum ada ringkasan.')}</p>
     ${
       docs.changedPages && docs.changedPages.length
         ? `<ul class="mini-list">${docs.changedPages
@@ -65,44 +69,63 @@ function renderDigest(data) {
   `;
   grid.appendChild(docsCard);
 
-  // Kartu 2: post X terbaru
-  const posts = data.posts || [];
-  const postsCard = document.createElement('article');
-  postsCard.className = 'card';
-  const postsHtml = posts.length
-    ? posts
+  const repos = data.github || [];
+  const githubCard = document.createElement('article');
+  githubCard.className = 'card';
+  const repoHtml = repos.length
+    ? repos
         .map(
-          (p) => `
+          (r) => `
       <li>
-        <a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener">${escapeHtml(p.text || '(tanpa teks)')}</a>
-        <span class="post-date">${formatDate(p.date)}</span>
+        <a href="${escapeHtml(r.url || '#')}" target="_blank" rel="noopener">${escapeHtml(r.repo || '(repo)')}</a>
+        <span class="repo-pushed">${formatDate(r.pushedAt)}</span>
       </li>`
         )
         .join('')
-    : '<li class="muted">Belum ada post baru dari @SeismicSys minggu ini.</li>';
-  postsCard.innerHTML = `
-    <span class="card-tag tag-social">Dari X</span>
-    <h3>Post Terbaru @SeismicSys</h3>
-    <ul class="post-list">${postsHtml}</ul>
+    : '<li class="muted">Belum ada data aktivitas GitHub.</li>';
+  githubCard.innerHTML = `
+    <span class="card-tag tag-social">GitHub</span>
+    <h3>Aktivitas GitHub (SeismicSystems)</h3>
+    <ul class="repo-list">${repoHtml}</ul>
   `;
-  grid.appendChild(postsCard);
+  grid.appendChild(githubCard);
 
-  // --- Arsip minggu lalu ---
+  // --- Sorotan Ekosistem (post dari @SeismicSys + proyek ekosistem) ---
+  const ecoList = document.getElementById('ecosystem-list');
+  const ecoPosts = data.ecosystemPosts || data.posts || []; // fallback ke skema lama
+  ecoList.innerHTML = '';
+  if (ecoPosts.length) {
+    ecoPosts.forEach((p) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span class="eco-tag">${escapeHtml(p.project || 'Seismic')}</span>
+        <span class="eco-body">
+          <a href="${escapeHtml(p.url || '#')}" target="_blank" rel="noopener">${escapeHtml(p.text || '(tanpa teks)')}</a>
+          <span class="eco-date">${formatDate(p.date)}</span>
+        </span>
+      `;
+      ecoList.appendChild(li);
+    });
+  } else {
+    ecoList.innerHTML = '<li class="muted">Belum ada post baru terdeteksi.</li>';
+  }
+
+  // --- Riwayat sebelumnya ---
   const archiveList = document.getElementById('archive-list');
   const history = data.history || [];
   archiveList.innerHTML = '';
   if (history.length) {
-    history.forEach((week) => {
+    history.forEach((entry) => {
       const li = document.createElement('li');
       li.innerHTML = `
-        <span class="archive-week">${escapeHtml(week.weekLabel || '')}</span>
-        <span class="archive-summary">${escapeHtml(week.summary || '')}</span>
+        <span class="archive-week">${escapeHtml(entry.periodLabel || entry.weekLabel || '')}</span>
+        <span class="archive-summary">${escapeHtml(entry.summary || '')}</span>
       `;
       archiveList.appendChild(li);
     });
   } else {
     archiveList.innerHTML =
-      '<li class="muted">Arsip bakal keisi otomatis setelah workflow n8n jalan beberapa minggu.</li>';
+      '<li class="muted">Riwayat bakal keisi otomatis setelah workflow n8n jalan beberapa hari.</li>';
   }
 
   renderPulses(history.length + 1);
@@ -112,7 +135,9 @@ function renderFallback() {
   document.getElementById('last-updated').textContent =
     'Belum ada data digest — jalanin dulu workflow n8n-nya (lihat README).';
   document.getElementById('digest-grid').innerHTML =
-    '<p class="muted">digest.json belum ketemu, formatnya salah, atau belum pernah ditulis sama n8n.</p>';
+    '<p class="muted">data/digest.json belum ketemu, formatnya salah, atau belum pernah ditulis sama n8n.</p>';
+  document.getElementById('ecosystem-list').innerHTML =
+    '<li class="muted">Belum ada data ekosistem.</li>';
   renderPulses(1);
 }
 
@@ -120,7 +145,7 @@ function renderPulses(count) {
   const g = document.getElementById('waveform-pulses');
   if (!g) return;
   g.innerHTML = '';
-  const total = Math.max(1, Math.min(count, 8)); // biar ga numpuk kalau arsip udah panjang
+  const total = Math.max(1, Math.min(count, 8)); // biar ga numpuk kalau riwayat udah panjang
   const spacing = 1000 / (total + 1);
   for (let i = 1; i <= total; i++) {
     const cx = spacing * i;
