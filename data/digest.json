@@ -1,1 +1,122 @@
-
+{
+  "generatedAt": "2026-07-27T10:16:13.765Z",
+  "periodLabel": "Senin, 27 Juli",
+  "docs": {
+    "changed": true,
+    "summary": "Docs berubah — 5 baris baru terdeteksi di index.",
+    "changedPages": [
+      "# Seismic Docs",
+      "## General",
+      "- [Welcome](https://docs.seismic.systems/overview/readme.md): Private by Default. Familiar by Design.",
+      "- [Why Seismic](https://docs.seismic.systems/overview/why-seismic.md)",
+      "- [How Seismic Works](https://docs.seismic.systems/overview/how-seismic-works.md)"
+    ]
+  },
+  "ecosystemPosts": [
+    {
+      "project": "@SeismicSys",
+      "text": "Named, multi-currency accounts for global earners. Powered by Seismic.",
+      "url": "https://x.com/SeismicSys/status/2072004201337565505",
+      "date": "2026-06-30T17:07:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "Pinned: Seismic Testnet is live. We built it alongside 30 financial services companies, from fintech startups, to regulated institutions, to local governments.",
+      "url": "https://x.com/SeismicSys/status/2054566547255898360",
+      "date": "2026-05-13T14:16:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "Sedona (@SedonaFi) is a trading-first neobank that brings the simplicity of apps like Coinbase or Venmo to DeFi. Private trades, auto-managed yield and card spending, all in one place. No blockchain complexity, just a cl",
+      "url": "https://x.com/SeismicSys/status/2049170722661036163",
+      "date": "2026-04-28T16:55:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "gEarth",
+      "url": "https://x.com/SeismicSys/status/2047347568602923314",
+      "date": "2026-04-23T16:11:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "Digital nomads spent $80B in SEA last year, yet over 15% of them held visas that were ineligible for local bank accounts with QR code support. Prism (@getprism_money) is a neobank that enables these nomads to spend with ",
+      "url": "https://x.com/SeismicSys/status/2044414554164052300",
+      "date": "2026-04-15T13:56:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "DashX (@DashXHQ) is building on Seismic.",
+      "url": "https://x.com/SeismicSys/status/2042287024598638596",
+      "date": "2026-04-09T17:02:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "You had me at FDIC.",
+      "url": "https://x.com/SeismicSys/status/2041548932153528450",
+      "date": "2026-04-07T16:09:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "March Madness is a religion at Seismic HQ. This year, one of our team members spun up an onchain bracket contest. Submit your bracket today. Top 5 get special edition MM x Seismic merch.",
+      "url": "https://x.com/SeismicSys/status/2034329845828661522",
+      "date": "2026-03-18T18:03:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "Blend (@blend_money) is building on Seismic. A treasury-as-a-service platform for fintechs, now using Seismic to power private: > multi-currency accounts > money market instruments > local pay-in rails",
+      "url": "https://x.com/SeismicSys/status/2032110096134664431",
+      "date": "2026-03-12T15:02:00.000Z"
+    },
+    {
+      "project": "@vend_money",
+      "text": "RT by @SeismicSys: RT by @SeismicSys: Vend has been selected for the Seismic Builders Program! 🔨 @SeismicSys is building the financial infrastructure layer for the next generation of fintech - combining privacy-preservi",
+      "url": "https://x.com/vend_money/status/2029950776207110365",
+      "date": "2026-03-06T16:02:00.000Z"
+    },
+    {
+      "project": "@lyronctk",
+      "text": "RT by @SeismicSys: RT by @SeismicSys: Introducing Seismic's builders program. Now open to the public. We've already evaluated 50+ startups. Our first pick: @vend_money.",
+      "url": "https://x.com/lyronctk/status/2029944929548394560",
+      "date": "2026-03-06T15:39:00.000Z"
+    },
+    {
+      "project": "@SeismicSys",
+      "text": "Via is building on Seismic. A global account for internet-native businesses, now using Seismic to power private > multi-currency accounts > cross-border payments > flexible credit lines",
+      "url": "https://x.com/SeismicSys/status/2027040733991997596",
+      "date": "2026-02-26T15:19:00.000Z"
+    }
+  ],
+  "github": [
+    {
+      "repo": "SeismicSystems/seismic-reth",
+      "pushedAt": "2026-07-27T08:29:22Z",
+      "url": "https://github.com/SeismicSystems/seismic-reth"
+    },
+    {
+      "repo": "SeismicSystems/seismic-evm",
+      "pushedAt": "2026-07-27T08:28:40Z",
+      "url": "https://github.com/SeismicSystems/seismic-evm"
+    },
+    {
+      "repo": "SeismicSystems/seismic",
+      "pushedAt": "2026-07-24T23:55:13Z",
+      "url": "https://github.com/SeismicSystems/seismic"
+    },
+    {
+      "repo": "SeismicSystems/summit",
+      "pushedAt": "2026-07-24T14:36:23Z",
+      "url": "https://github.com/SeismicSystems/summit"
+    },
+    {
+      "repo": "SeismicSystems/seismic-foundry",
+      "pushedAt": "2026-07-23T20:01:43Z",
+      "url": "https://github.com/SeismicSystems/seismic-foundry"
+    },
+    {
+      "repo": "SeismicSystems/seismic-alloy",
+      "pushedAt": "2026-07-23T17:50:49Z",
+      "url": "https://github.com/SeismicSystems/seismic-alloy"
+    }
+  ],
+  "history": []
+}
