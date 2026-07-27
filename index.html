@@ -7,100 +7,268 @@
 <meta name="description" content="Digest harian otomatis dari Seismic & ekosistemnya: docs, GitHub, dan post X dari semua proyek, dirangkum tiap hari lewat n8n.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Ambient background layers -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+<div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
 <header class="site-header">
   <div class="wrap header-inner">
-    <span class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      Seismic <span class="brand-accent">Pulse</span>
-    </span>
+    <a class="brand" href="#">
+      <span class="brand-pulse" aria-hidden="true">
+        <span class="brand-ring"></span>
+        <span class="brand-dot"></span>
+      </span>
+      <span class="brand-text">SEISMIC<span class="brand-accent">PULSE</span></span>
+    </a>
     <nav class="header-nav">
       <a href="https://www.seismic.systems/" target="_blank" rel="noopener">Website</a>
       <a href="https://docs.seismic.systems/" target="_blank" rel="noopener">Docs</a>
-      <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X</a>
+      <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://discord.com/invite/seismic" target="_blank" rel="noopener">Discord</a>
     </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
 <main>
 
-  <section class="hero wrap">
-    <p class="eyebrow">OTOMATIS &middot; HARIAN &middot; SELURUH EKOSISTEM</p>
-    <h1>Sinyal dari Seismic &amp; ekosistemnya,<br>ditangkep tiap hari.</h1>
-    <p class="hero-sub">Seismic Pulse narik update dokumentasi, aktivitas GitHub, dan post X &mdash; dari <strong>@SeismicSys</strong> dan proyek-proyek yang dibangun di atasnya &mdash; otomatis tiap hari lewat n8n.</p>
-    <p class="hero-meta" id="last-updated">Memuat waktu update terakhir&hellip;</p>
-
-    <svg class="waveform" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
-      <path class="waveform-line" d="M0,60 C15,60 25,58 35,60 C55,63 65,38 78,60 C95,90 105,15 118,60 C150,60 165,56 180,60 L215,60 C228,60 236,12 248,60 C258,92 268,60 280,60 L355,60 C368,60 378,28 390,60 C400,86 410,60 422,60 L515,60 C528,60 534,44 540,60 C546,74 552,60 558,60 L645,60 C658,60 664,8 670,60 C676,98 682,60 688,60 L795,60 C808,60 815,32 822,60 C828,80 834,60 840,60 L1000,60"/>
-      <g class="waveform-pulses" id="waveform-pulses"></g>
-    </svg>
-  </section>
-
-  <section class="section wrap" id="today">
-    <h2 class="section-title">Update Terbaru</h2>
-    <div class="digest-grid" id="digest-grid">
-      <p class="muted">Memuat digest&hellip;</p>
-    </div>
-  </section>
-
-  <section class="section wrap" id="ecosystem">
-    <div class="section-head">
-      <h2 class="section-title">Sorotan Ekosistem</h2>
-      <p class="section-sub">Post terbaru dari @SeismicSys dan proyek yang dibangun di atas Seismic.</p>
-    </div>
-    <ul class="ecosystem-list" id="ecosystem-list">
-      <li class="muted">Memuat sorotan ekosistem&hellip;</li>
-    </ul>
-  </section>
-
-  <section class="section wrap explainer">
-    <h2 class="section-title">Buat yang baru denger Seismic</h2>
-    <div class="explainer-grid">
-      <p class="explainer-text">Seismic itu blockchain EVM yang privasinya bawaan, bukan tempelan belakangan. Kamu tetep nulis Solidity, deploy pake Foundry, semua alur kerja tetep sama &mdash; tapi ada satu perubahan kecil di tipe data yang efeknya gede ke seluruh sistem. Di atasnya, tumbuh ekosistem aplikasi finansial &mdash; kayak Brookwell, DashX, Prism &mdash; yang butuh privasi ini buat data keuangan yang sensitif.</p>
-      <div class="code-compare">
-        <div class="code-block">
-          <span class="code-label">ERC20 biasa</span>
-          <pre><code>uint256 <span class="tok">public</span> balanceOf;</code></pre>
-          <span class="code-note">Saldo keliatan semua orang</span>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          LIVE · OTOMATIS · HARIAN
+        </p>
+        <h1 class="hero-title">
+          Sinyal dari<br>
+          <em>Seismic</em> &amp;<br>
+          ekosistemnya.
+        </h1>
+        <p class="hero-sub">
+          Seismic Pulse narik update dokumentasi, aktivitas GitHub, dan post dari <strong>@SeismicSys</strong> dan seluruh proyek ekosistem — otomatis tiap hari lewat n8n.
+        </p>
+        <p class="hero-meta" id="last-updated">
+          <span class="meta-label">LAST UPDATE</span>
+          <span class="meta-value">Memuat&hellip;</span>
+        </p>
+        <div class="hero-cta">
+          <a href="#today" class="btn-primary">Lihat Update Hari Ini</a>
+          <a href="https://github.com/morisxbt/seismic-pulse" target="_blank" rel="noopener" class="btn-ghost">Source di GitHub ↗</a>
         </div>
-        <div class="code-arrow" aria-hidden="true">&rarr;</div>
-        <div class="code-block accent">
-          <span class="code-label">SRC20 (Seismic)</span>
-          <pre><code><span class="tok-accent">suint256</span> balanceOf;</code></pre>
-          <span class="code-note">Saldo disembunyiin, cuma pemiliknya yang tau</span>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="signal-display">
+          <div class="signal-header">
+            <span class="signal-label">SEISMIC · NETWORK SIGNAL</span>
+            <span class="signal-status">
+              <span class="status-dot"></span>
+              LIVE
+            </span>
+          </div>
+          <svg class="waveform" viewBox="0 0 600 140" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#f2a93b;stop-opacity:0"/>
+                <stop offset="20%" style="stop-color:#f2a93b;stop-opacity:1"/>
+                <stop offset="80%" style="stop-color:#f2a93b;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#f2a93b;stop-opacity:0"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <path class="wave-bg" d="M0,70 C20,70 30,68 45,70 C65,73 75,40 92,70 C110,104 120,18 138,70 C175,70 195,64 215,70 L255,70 C270,70 280,14 295,70 C308,112 318,70 332,70 L385,70 C400,70 412,30 425,70 C436,102 446,70 460,70 L525,70 C540,70 548,46 556,70 C564,88 572,70 580,70 L600,70"/>
+            <path class="wave-main" d="M0,70 C20,70 30,68 45,70 C65,73 75,40 92,70 C110,104 120,18 138,70 C175,70 195,64 215,70 L255,70 C270,70 280,14 295,70 C308,112 318,70 332,70 L385,70 C400,70 412,30 425,70 C436,102 446,70 460,70 L525,70 C540,70 548,46 556,70 C564,88 572,70 580,70 L600,70" filter="url(#glow)"/>
+            <g id="waveform-pulses"></g>
+          </svg>
+          <div class="signal-footer">
+            <div class="signal-stat"><span class="ss-label">DOCS</span><span class="ss-val" id="sig-docs">—</span></div>
+            <div class="signal-stat"><span class="ss-label">POSTS</span><span class="ss-val" id="sig-posts">—</span></div>
+            <div class="signal-stat"><span class="ss-label">REPOS</span><span class="ss-val" id="sig-repos">—</span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section wrap" id="archive">
-    <h2 class="section-title">Riwayat Sebelumnya</h2>
-    <ul class="archive-list" id="archive-list">
-      <li class="muted">Riwayat bakal keisi otomatis setelah workflow n8n jalan beberapa hari.</li>
-    </ul>
+  <!-- ═══ UPDATE TERBARU ═══ -->
+  <section class="section" id="today">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">01 · UPDATE TERBARU</p>
+          <h2 class="section-title">Apa yang berubah hari ini</h2>
+        </div>
+      </div>
+      <div class="digest-grid" id="digest-grid">
+        <div class="card-skeleton"></div>
+        <div class="card-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EKOSISTEM ═══ -->
+  <section class="section" id="ecosystem">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">02 · SOROTAN EKOSISTEM</p>
+          <h2 class="section-title">Post terbaru dari seluruh ekosistem</h2>
+        </div>
+        <p class="section-desc">@SeismicSys dan proyek yang dibangun di atas Seismic.</p>
+      </div>
+      <ul class="ecosystem-list" id="ecosystem-list">
+        <li class="list-placeholder">Memuat&hellip;</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ EXPLAINER ═══ -->
+  <section class="section explainer-section">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">03 · SEISMIC 101</p>
+          <h2 class="section-title">Buat yang baru denger Seismic</h2>
+        </div>
+      </div>
+      <div class="explainer-grid">
+        <div class="explainer-text-col">
+          <p class="explainer-text">Seismic itu blockchain EVM yang privasinya bawaan, bukan tempelan belakangan. Kamu tetap nulis Solidity, deploy pakai Foundry &mdash; semua workflow sama. Tapi ada satu perubahan kecil di tipe data yang efeknya gede ke seluruh sistem.</p>
+          <p class="explainer-text">Di atasnya tumbuh ekosistem aplikasi finansial &mdash; Brookwell, DashX, Prism &mdash; yang butuh privasi ini untuk data keuangan yang sensitif.</p>
+          <div class="explainer-tags">
+            <span class="etag">EVM Compatible</span>
+            <span class="etag">Privacy Native</span>
+            <span class="etag">Solidity</span>
+            <span class="etag">Foundry</span>
+          </div>
+        </div>
+        <div class="code-compare-col">
+          <div class="code-compare">
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-filename">ERC20.sol</span>
+              </div>
+              <pre><code><span class="tok-kw">uint256</span> <span class="tok-pub">public</span> balanceOf;</code></pre>
+              <div class="code-note-row">
+                <span class="code-note-icon">👁</span>
+                <span class="code-note">Saldo keliatan semua orang</span>
+              </div>
+            </div>
+            <div class="code-arrow-wrap">
+              <div class="code-arrow">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                  <path d="M6 16H26M26 16L18 8M26 16L18 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="code-arrow-label">SEISMIC</span>
+            </div>
+            <div class="code-block code-block-accent">
+              <div class="code-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-filename">SRC20.sol</span>
+              </div>
+              <pre><code><span class="tok-priv">suint256</span> balanceOf;</code></pre>
+              <div class="code-note-row">
+                <span class="code-note-icon">🔒</span>
+                <span class="code-note">Cuma pemiliknya yang tau saldonya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARCHIVE ═══ -->
+  <section class="section" id="archive">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">04 · RIWAYAT</p>
+          <h2 class="section-title">Update sebelumnya</h2>
+        </div>
+      </div>
+      <ul class="archive-list" id="archive-list">
+        <li class="list-placeholder">Riwayat bakal keisi otomatis setelah workflow n8n jalan beberapa hari.</li>
+      </ul>
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div class="footer-text">
-      <p class="footer-disclaimer">Seismic Pulse adalah proyek komunitas independen &mdash; bukan situs resmi Seismic Systems Inc. maupun proyek ekosistem yang disebut di sini.</p>
-      <p class="footer-credit">Dibangun manual sekali, diperbarui otomatis pakai n8n tiap hari.</p>
+    <div class="footer-left">
+      <span class="brand footer-brand">
+        <span class="brand-pulse" aria-hidden="true">
+          <span class="brand-ring"></span>
+          <span class="brand-dot"></span>
+        </span>
+        <span class="brand-text">SEISMIC<span class="brand-accent">PULSE</span></span>
+      </span>
+      <p class="footer-disclaimer">Proyek komunitas independen — bukan situs resmi Seismic Systems Inc.</p>
+      <p class="footer-credit">Dibangun sekali, diperbarui otomatis tiap hari via n8n.</p>
     </div>
     <div class="footer-links">
       <a href="https://www.seismic.systems/" target="_blank" rel="noopener">Website</a>
       <a href="https://docs.seismic.systems/" target="_blank" rel="noopener">Docs</a>
       <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X</a>
       <a href="https://discord.com/invite/seismic" target="_blank" rel="noopener">Discord</a>
+      <a href="https://github.com/morisxbt/seismic-pulse" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script>
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.header-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !open);
+    nav.classList.toggle('nav-open', !open);
+  });
+
+  // Smooth scroll for hero CTA
+  document.querySelector('a[href="#today"]')?.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('today')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Hero signal stats from digest data — hooked after script.js renders
+  const _origRender = window.renderDigest;
+  document.addEventListener('DOMContentLoaded', () => {
+    // patch last-updated to use new structure
+    const origLoad = loadDigest;
+  });
+
+  // Intercept renderDigest to populate signal stats
+  document.addEventListener('digest-rendered', (e) => {
+    const data = e.detail;
+    const docsEl = document.getElementById('sig-docs');
+    const postsEl = document.getElementById('sig-posts');
+    const reposEl = document.getElementById('sig-repos');
+    if (docsEl) docsEl.textContent = data.docs?.changed ? 'UPDATED' : 'STABLE';
+    if (postsEl) postsEl.textContent = (data.ecosystemPosts?.length || 0) + ' posts';
+    if (reposEl) reposEl.textContent = (data.github?.length || 0) + ' repos';
+  });
+</script>
 </body>
 </html>
