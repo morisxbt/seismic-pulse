@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-29T09:10:44.900Z",
-  "periodLabel": "Rabu, 29 Juli",
+  "generatedAt": "2026-07-30T09:48:33.501Z",
+  "periodLabel": "Kamis, 30 Juli",
   "docs": {
     "changed": true,
     "summary": "Docs berubah — 5 baris baru terdeteksi di index.",
@@ -88,34 +88,34 @@
   ],
   "github": [
     {
-      "repo": "SeismicSystems/seismic-reth",
-      "pushedAt": "2026-07-29T08:37:19Z",
-      "url": "https://github.com/SeismicSystems/seismic-reth"
-    },
-    {
       "repo": "SeismicSystems/seismic-evm",
-      "pushedAt": "2026-07-29T08:34:30Z",
+      "pushedAt": "2026-07-30T09:24:07Z",
       "url": "https://github.com/SeismicSystems/seismic-evm"
     },
     {
-      "repo": "SeismicSystems/seismic-foundry",
-      "pushedAt": "2026-07-28T22:01:14Z",
-      "url": "https://github.com/SeismicSystems/seismic-foundry"
+      "repo": "SeismicSystems/seismic-revm",
+      "pushedAt": "2026-07-30T09:14:46Z",
+      "url": "https://github.com/SeismicSystems/seismic-revm"
+    },
+    {
+      "repo": "SeismicSystems/enclave",
+      "pushedAt": "2026-07-29T21:50:26Z",
+      "url": "https://github.com/SeismicSystems/enclave"
     },
     {
       "repo": "SeismicSystems/seismic",
-      "pushedAt": "2026-07-28T21:49:36Z",
+      "pushedAt": "2026-07-29T21:00:23Z",
       "url": "https://github.com/SeismicSystems/seismic"
     },
     {
-      "repo": "SeismicSystems/summit",
-      "pushedAt": "2026-07-28T21:27:36Z",
-      "url": "https://github.com/SeismicSystems/summit"
+      "repo": "SeismicSystems/seismic-reth",
+      "pushedAt": "2026-07-29T18:53:13Z",
+      "url": "https://github.com/SeismicSystems/seismic-reth"
     },
     {
-      "repo": "SeismicSystems/seismic-revm",
-      "pushedAt": "2026-07-28T20:44:47Z",
-      "url": "https://github.com/SeismicSystems/seismic-revm"
+      "repo": "SeismicSystems/summit",
+      "pushedAt": "2026-07-29T16:38:42Z",
+      "url": "https://github.com/SeismicSystems/summit"
     }
   ],
   "history": []
