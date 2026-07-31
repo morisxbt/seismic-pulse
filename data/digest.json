@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-30T09:48:33.501Z",
-  "periodLabel": "Kamis, 30 Juli",
+  "generatedAt": "2026-07-31T09:46:37.419Z",
+  "periodLabel": "Jumat, 31 Juli",
   "docs": {
     "changed": true,
     "summary": "Docs berubah — 5 baris baru terdeteksi di index.",
@@ -13,6 +13,12 @@
     ]
   },
   "ecosystemPosts": [
+    {
+      "project": "@SeismicSys",
+      "text": "SMBs in SEA move over $400B across borders every year. A third still juggle multiple providers to do it. Reah (@ReahPlatform) gives them one platform for fiat and stablecoin treasuries, global cards, and local payout rai",
+      "url": "https://x.com/SeismicSys/status/2082850036761731506",
+      "date": "2026-07-30T15:25:00.000Z"
+    },
     {
       "project": "@SeismicSys",
       "text": "Named, multi-currency accounts for global earners. Powered by Seismic.",
@@ -78,44 +84,38 @@
       "text": "RT by @SeismicSys: RT by @SeismicSys: Introducing Seismic's builders program. Now open to the public. We've already evaluated 50+ startups. Our first pick: @vend_money.",
       "url": "https://x.com/lyronctk/status/2029944929548394560",
       "date": "2026-03-06T15:39:00.000Z"
-    },
-    {
-      "project": "@SeismicSys",
-      "text": "Via is building on Seismic. A global account for internet-native businesses, now using Seismic to power private > multi-currency accounts > cross-border payments > flexible credit lines",
-      "url": "https://x.com/SeismicSys/status/2027040733991997596",
-      "date": "2026-02-26T15:19:00.000Z"
     }
   ],
   "github": [
     {
-      "repo": "SeismicSystems/seismic-evm",
-      "pushedAt": "2026-07-30T09:24:07Z",
-      "url": "https://github.com/SeismicSystems/seismic-evm"
-    },
-    {
-      "repo": "SeismicSystems/seismic-revm",
-      "pushedAt": "2026-07-30T09:14:46Z",
-      "url": "https://github.com/SeismicSystems/seismic-revm"
-    },
-    {
-      "repo": "SeismicSystems/enclave",
-      "pushedAt": "2026-07-29T21:50:26Z",
-      "url": "https://github.com/SeismicSystems/enclave"
-    },
-    {
       "repo": "SeismicSystems/seismic",
-      "pushedAt": "2026-07-29T21:00:23Z",
+      "pushedAt": "2026-07-31T09:40:02Z",
       "url": "https://github.com/SeismicSystems/seismic"
     },
     {
+      "repo": "SeismicSystems/deploy",
+      "pushedAt": "2026-07-30T22:00:19Z",
+      "url": "https://github.com/SeismicSystems/deploy"
+    },
+    {
       "repo": "SeismicSystems/seismic-reth",
-      "pushedAt": "2026-07-29T18:53:13Z",
+      "pushedAt": "2026-07-30T21:57:02Z",
       "url": "https://github.com/SeismicSystems/seismic-reth"
     },
     {
-      "repo": "SeismicSystems/summit",
-      "pushedAt": "2026-07-29T16:38:42Z",
-      "url": "https://github.com/SeismicSystems/summit"
+      "repo": "SeismicSystems/seismic-solidity",
+      "pushedAt": "2026-07-30T21:03:02Z",
+      "url": "https://github.com/SeismicSystems/seismic-solidity"
+    },
+    {
+      "repo": "SeismicSystems/seismic-revm",
+      "pushedAt": "2026-07-30T18:43:59Z",
+      "url": "https://github.com/SeismicSystems/seismic-revm"
+    },
+    {
+      "repo": "SeismicSystems/seismic-foundry",
+      "pushedAt": "2026-07-30T17:07:09Z",
+      "url": "https://github.com/SeismicSystems/seismic-foundry"
     }
   ],
   "history": []
