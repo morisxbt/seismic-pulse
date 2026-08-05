@@ -32,6 +32,16 @@
       <a href="https://x.com/SeismicSys" target="_blank" rel="noopener">X / Twitter</a>
       <a href="https://discord.com/invite/seismic" target="_blank" rel="noopener">Discord</a>
     </nav>
+    <div class="header-controls">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn active" data-lang="id">ID</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <div class="translate-wrap">
+        <button type="button" class="translate-btn" id="translate-toggle" data-i18n="translateLabel">Translate</button>
+        <div id="google_translate_element" class="google-translate-box"></div>
+      </div>
+    </div>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -46,22 +56,23 @@
       <div class="hero-left">
         <p class="eyebrow">
           <span class="eyebrow-dot"></span>
-          LIVE · OTOMATIS · HARIAN
+          <span data-i18n="eyebrow">LIVE · OTOMATIS · HARIAN</span>
         </p>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n="heroTitle">
           Sinyal dari<br>
           <em>Seismic</em> &amp;<br>
           ekosistemnya.
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="heroSub">
           Seismic Pulse narik update dokumentasi, aktivitas GitHub, dan post dari <strong>@SeismicSys</strong> dan seluruh proyek ekosistem — otomatis tiap hari lewat n8n.
         </p>
         <p class="hero-meta" id="last-updated">
-          <span class="meta-label">LAST UPDATE</span>
+          <span class="meta-label" data-i18n="metaLabel">LAST UPDATE</span>
           <span class="meta-value">Memuat&hellip;</span>
         </p>
+        <p class="hero-trend" id="hero-trend"></p>
         <div class="hero-cta">
-          <a href="#today" class="btn-primary">Lihat Update Hari Ini</a>
+          <a href="#today" class="btn-primary" data-i18n="ctaToday">Lihat Update Hari Ini</a>
           <a href="https://github.com/morisxbt/seismic-pulse" target="_blank" rel="noopener" class="btn-ghost">Source di GitHub ↗</a>
         </div>
       </div>
@@ -107,7 +118,7 @@
       <div class="section-header">
         <div>
           <p class="section-eyebrow">01 · UPDATE TERBARU</p>
-          <h2 class="section-title">Apa yang berubah hari ini</h2>
+          <h2 class="section-title" data-i18n="sectionTodayTitle">Apa yang berubah hari ini</h2>
         </div>
       </div>
       <div class="digest-grid" id="digest-grid">
@@ -117,15 +128,47 @@
     </div>
   </section>
 
+  <!-- ═══ RESMI ═══ -->
+  <section class="section" id="official">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">02 · UPDATE RESMI</p>
+          <h2 class="section-title" data-i18n="sectionOfficialTitle">Dari akun resmi Seismic</h2>
+        </div>
+        <p class="section-desc" data-i18n="sectionOfficialDesc">Post langsung dari @SeismicSys — dipisah dari CEO dan ekosistem.</p>
+      </div>
+      <ul class="ecosystem-list" id="official-list">
+        <li class="list-placeholder">Memuat&hellip;</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ LEADERSHIP ═══ -->
+  <section class="section" id="leadership">
+    <div class="wrap">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">03 · DARI CEO</p>
+          <h2 class="section-title" data-i18n="sectionLeadershipTitle">Dari Lyron (CEO)</h2>
+        </div>
+        <p class="section-desc" data-i18n="sectionLeadershipDesc">Post pribadi Lyron Co Ting Keh, CEO &amp; Founder Seismic.</p>
+      </div>
+      <ul class="ecosystem-list" id="leadership-list">
+        <li class="list-placeholder">Memuat&hellip;</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ═══ EKOSISTEM ═══ -->
   <section class="section" id="ecosystem">
     <div class="wrap">
       <div class="section-header">
         <div>
-          <p class="section-eyebrow">02 · SOROTAN EKOSISTEM</p>
-          <h2 class="section-title">Post terbaru dari seluruh ekosistem</h2>
+          <p class="section-eyebrow">04 · SOROTAN EKOSISTEM</p>
+          <h2 class="section-title" data-i18n="sectionEcosystemTitle">Post terbaru dari proyek ekosistem</h2>
         </div>
-        <p class="section-desc">@SeismicSys dan proyek yang dibangun di atas Seismic.</p>
+        <p class="section-desc" data-i18n="sectionEcosystemDesc">13 proyek yang dibangun di atas Seismic — dipisah dari akun resmi &amp; CEO.</p>
       </div>
       <ul class="ecosystem-list" id="ecosystem-list">
         <li class="list-placeholder">Memuat&hellip;</li>
@@ -138,14 +181,14 @@
     <div class="wrap">
       <div class="section-header">
         <div>
-          <p class="section-eyebrow">03 · SEISMIC 101</p>
-          <h2 class="section-title">Buat yang baru denger Seismic</h2>
+          <p class="section-eyebrow">05 · SEISMIC 101</p>
+          <h2 class="section-title" data-i18n="sectionExplainerTitle">Buat yang baru denger Seismic</h2>
         </div>
       </div>
       <div class="explainer-grid">
         <div class="explainer-text-col">
-          <p class="explainer-text">Seismic itu blockchain EVM yang privasinya bawaan, bukan tempelan belakangan. Kamu tetap nulis Solidity, deploy pakai Foundry &mdash; semua workflow sama. Tapi ada satu perubahan kecil di tipe data yang efeknya gede ke seluruh sistem.</p>
-          <p class="explainer-text">Di atasnya tumbuh ekosistem aplikasi finansial &mdash; Brookwell, DashX, Prism &mdash; yang butuh privasi ini untuk data keuangan yang sensitif.</p>
+          <p class="explainer-text" data-i18n="explainerText1">Seismic itu blockchain EVM yang privasinya bawaan, bukan tempelan belakangan. Kamu tetap nulis Solidity, deploy pakai Foundry &mdash; semua workflow sama. Tapi ada satu perubahan kecil di tipe data yang efeknya gede ke seluruh sistem.</p>
+          <p class="explainer-text" data-i18n="explainerText2">Di atasnya tumbuh ekosistem aplikasi finansial &mdash; Brookwell, DashX, Prism &mdash; yang butuh privasi ini untuk data keuangan yang sensitif.</p>
           <div class="explainer-tags">
             <span class="etag">EVM Compatible</span>
             <span class="etag">Privacy Native</span>
@@ -165,7 +208,7 @@
               <pre><code><span class="tok-kw">uint256</span> <span class="tok-pub">public</span> balanceOf;</code></pre>
               <div class="code-note-row">
                 <span class="code-note-icon">👁</span>
-                <span class="code-note">Saldo keliatan semua orang</span>
+                <span class="code-note" data-i18n="codeNoteA">Saldo keliatan semua orang</span>
               </div>
             </div>
             <div class="code-arrow-wrap">
@@ -186,7 +229,7 @@
               <pre><code><span class="tok-priv">suint256</span> balanceOf;</code></pre>
               <div class="code-note-row">
                 <span class="code-note-icon">🔒</span>
-                <span class="code-note">Cuma pemiliknya yang tau saldonya</span>
+                <span class="code-note" data-i18n="codeNoteB">Cuma pemiliknya yang tau saldonya</span>
               </div>
             </div>
           </div>
@@ -200,12 +243,12 @@
     <div class="wrap">
       <div class="section-header">
         <div>
-          <p class="section-eyebrow">04 · RIWAYAT</p>
-          <h2 class="section-title">Update sebelumnya</h2>
+          <p class="section-eyebrow">06 · RIWAYAT</p>
+          <h2 class="section-title" data-i18n="sectionArchiveTitle">Update sebelumnya</h2>
         </div>
       </div>
       <ul class="archive-list" id="archive-list">
-        <li class="list-placeholder">Riwayat bakal keisi otomatis setelah workflow n8n jalan beberapa hari.</li>
+        <li class="list-placeholder" data-i18n="archiveEmpty">Riwayat bakal keisi otomatis setelah workflow n8n jalan beberapa hari.</li>
       </ul>
     </div>
   </section>
@@ -222,8 +265,8 @@
         </span>
         <span class="brand-text">SEISMIC<span class="brand-accent">PULSE</span></span>
       </span>
-      <p class="footer-disclaimer">Proyek komunitas independen — bukan situs resmi Seismic Systems Inc.</p>
-      <p class="footer-credit">Dibangun sekali, diperbarui otomatis tiap hari via n8n.</p>
+      <p class="footer-disclaimer" data-i18n="footerDisclaimer">Proyek komunitas independen — bukan situs resmi Seismic Systems Inc.</p>
+      <p class="footer-credit" data-i18n="footerCredit">Dibangun sekali, diperbarui otomatis tiap hari via n8n.</p>
     </div>
     <div class="footer-links">
       <a href="https://www.seismic.systems/" target="_blank" rel="noopener">Website</a>
@@ -266,7 +309,7 @@
     const postsEl = document.getElementById('sig-posts');
     const reposEl = document.getElementById('sig-repos');
     if (docsEl) docsEl.textContent = data.docs?.changed ? 'UPDATED' : 'STABLE';
-    if (postsEl) postsEl.textContent = (data.ecosystemPosts?.length || 0) + ' posts';
+    if (postsEl) postsEl.textContent = ((data.official?.length || 0) + (data.leadership?.length || 0) + (data.ecosystemPosts?.length || 0)) + ' posts';
     if (reposEl) reposEl.textContent = (data.github?.length || 0) + ' repos';
   });
 </script>
